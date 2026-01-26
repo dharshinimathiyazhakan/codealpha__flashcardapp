@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Card 1 of 10"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressIndicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="EASY"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/editCardBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_edit"
+        app:tint="@android:color/white"
+        android:contentDescription="Edit Flashcard" />
+
+    <ImageView
+        android:id="@+id/deleteCardBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/editCardBtn"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_delete"
+        app:tint="@android:color/white"
+        android:contentDescription="Delete Flashcard" />
+
+    <FrameLayout
+        android:id="@+id/flashcardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/flashcardQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/flashcard_bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Question?"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/flashcardAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/flashcard_bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Answer"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcardContainer"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/prevBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            app:tint="@android:color/white"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            app:tint="@android:color/white"
+            android:src="@android:drawable/ic_media_next" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
+        android:contentDescription="Add new flashcard"/>
+
+</RelativeLayout>
