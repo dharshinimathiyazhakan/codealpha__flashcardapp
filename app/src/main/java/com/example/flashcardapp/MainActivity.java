@@ -196,6 +196,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void showCard(int index) {
         if (index >= 0 && index < currentFlashcards.size()) {
+            // Reset rotation before showing the new card
+            flashcardQuestion.setRotationY(0);
+            flashcardAnswer.setRotationY(0);
+
             Flashcard card = currentFlashcards.get(index);
             flashcardQuestion.setText(card.getQuestion());
             flashcardAnswer.setText(card.getAnswer());
