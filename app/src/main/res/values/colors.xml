@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="easy_color">#FFFFFF</color> <!-- White -->
-    <color name="medium_color">#FFCC80</color> <!-- Light Orange -->
-    <color name="hard_color">#EF9A9A</color> <!-- Light Red -->
-    <color name="answer_yellow">#FFFF00</color> <!-- Yellow -->
+    <!-- White -->
+    <!-- Light Orange -->
+    <!-- Light Red -->
+    <!-- Yellow -->
 </resources>
